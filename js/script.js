@@ -1,7 +1,7 @@
 function init(){
-  var el = document.getElementById('map-container');
-  var myLocation = new google.maps.LatLng(43.518779, 142.839524);
-  var mapOptions = {
+  const el = document.getElementById('map-container');
+  const myLocation = new google.maps.LatLng(43.518779, 142.839524);
+  const mapOptions = {
   center: myLocation,
   zoom: 8,
   mapTypeId: google.maps.MapTypeId.SATELLITE,
@@ -10,19 +10,19 @@ function init(){
 		}
   };
   
-  var myMap = new google.maps.Map(el, mapOptions);
+  const myMap = new google.maps.Map(el, mapOptions);
   
-  var marker = new google.maps.Marker({
+  const marker = new google.maps.Marker({
     position: myLocation,
     map: myMap,
     animation: google.maps.Animation.DROP,
   });
   
-  var contentString =
+  const contentString =
     '<h1 id="firstHeading" class="firstHeading">Hokkaido</h1>' + 
     '<p>Hokkaido is the second largest and northernmost of the four major islands in Japan. It is notable for being a popular stop for winter sports such as skiing and snowboarding.</p>';
     
-  var infowindow = new google.maps.InfoWindow({
+  const infowindow = new google.maps.InfoWindow({
     content: contentString,
   });
 
