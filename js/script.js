@@ -19,7 +19,7 @@ function init(){
   });
   
   var contentString =
-    '<h1 id="firstHeading" class="firstHeading">Hokkaido</h1>'
+    '<h1 id="firstHeading" class="firstHeading">Hokkaido</h1>' + 
     '<p>Hokkaido is the second largest and northernmost of the four major islands in Japan. It is notable for being a popular stop for winter sports such as skiing and snowboarding.</p>';
     
   var infowindow = new google.maps.InfoWindow({
