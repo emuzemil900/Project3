@@ -22,14 +22,14 @@ function initMap() {
     // Create an InfoWindow with the specified content
     const infowindow = new google.maps.InfoWindow({
         content: contentString,
-        ariaLabel: "Chicago",
+        ariaLabel: "Hokkaido",
     });
 
     // Create a marker and set its properties
     const marker = new google.maps.Marker({
-        position: myLatLng,
+        position: myLocation,
         map: map,
-        title: "Chicago",
+        title: "Hokkaido",
     });
 
     // Add a click event listener to the marker to open the InfoWindow
