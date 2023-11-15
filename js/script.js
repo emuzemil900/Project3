@@ -1,7 +1,7 @@
 // Google Maps API callback function
 function initMap() {
     // Coordinates for the initial map center
-    const myLocation = { lat: 43.518779, lng: 142.839524 };
+    const myLocation = { lat: 43.06204, lng: 141.35437 };
 
     // Create a new Google Map
     const map = new google.maps.Map(document.getElementById("map-container"), {
@@ -14,22 +14,22 @@ function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">' +
         "</div>" +
-        '<h1 id="first heading" class="first heading">Hokkaido</h1>' +
+        '<h1 id="first heading" class="first heading">Sapporo</h1>' +
         '<div id="body content">' +
-        "<p>Hokkaido is the second largest and northernmost of the four major islands in Japan. It is notable for being a popular stop for winter sports such as skiing and snowboarding</p>" +
+        "<p>Sapporo is the capital of Hokkaido, the second largest and northernmost of Japan's four major islands. It is notably a popular stop for winter sports such as skiing and snowboarding.</p>" +
         "</div>" + "</div>";
 
     // Create an InfoWindow with the specified content
     const infowindow = new google.maps.InfoWindow({
         content: contentString,
-        ariaLabel: "Hokkaido",
+        ariaLabel: "Sapporo",
     });
 
     // Create a marker and set its properties
     const marker = new google.maps.Marker({
         position: myLocation,
         map: map,
-        title: "Hokkaido",
+        title: "Sapporo",
     });
 
     // Add a click event listener to the marker to open the InfoWindow
