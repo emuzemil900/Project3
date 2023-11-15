@@ -1,49 +1,35 @@
-// Google Maps API callback function
-function initMap() {
-    // Coordinates for the initial map center
-    const myLocation = { lat: 43.06204, lng: 141.35437 };
+function initMap(){
+  var el = document.getElementById('map-container');
+  var myLocation = new google.maps.LatLng(43.06204, 141.35437);
+  
+  var mapOptions = {
+    center: myLocation,
+    zoom: 20,
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    
+    mapTypeControlOptions: {
+      position: google.maps.ControlPosition.BOTTOM_CENTER
+    }
+  };
 
-    // Create a new Google Map
-    const map = new google.maps.Map(document.getElementById("map-container"), {
-        zoom: 15,
-        center: myLocation,
-    });
+  var map = new google.maps.Map(el, mapOptions);
 
-    // HTML content for the InfoWindow
-    const contentString =
-        '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
-        '<h1 id="first heading" class="first heading">Sapporo</h1>' +
-        '<div id="body content">' +
-        "<p>Sapporo is the capital of Hokkaido, the second largest and northernmost of Japan's four major islands. It is notably a popular stop for winter sports such as skiing and snowboarding.</p>" +
-        "</div>" + "</div>";
+  var marker = new google.maps.Marker({
+    position: myLocation,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    icon: 'images/icon.jpg'
+  });
 
-    // Create an InfoWindow with the specified content
-    const infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        ariaLabel: "Sapporo",
-    });
+  var contentString = '<h1>Sapparo</h1><p>Sapporo is the capital of Hokkaido, the second largest and northernmost of Japan's four major islands. It is notably a popular stop for winter sports such as skiing and snowboarding.</p>';
 
-    // Create a marker and set its properties
-    const marker = new google.maps.Marker({
-        position: myLocation,
-        map: map,
-        title: "Sapporo",
-    });
+  var infowindow = new google.maps.InfoWindow ({
+    content: contentString
+  });
 
-    // Add a click event listener to the marker to open the InfoWindow
-    marker.addListener("click", () => {
-        infowindow.open({
-            anchor: marker,
-            map: map,
-        });
-    });
-
-    // Add a Traffic Layer to the map
-    const trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
+  google.maps.event.addListener(marker, 'mouseover', function() {
+    infowindow.open(map, marker);
+  });
 }
 
-// Make the initMap function available globally
-window.initMap = initMap;
+google.maps.event.addDomListener(window, 'load', initMap);
