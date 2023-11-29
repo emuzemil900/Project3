@@ -5,10 +5,11 @@ function initMap() {
     center: myLocation,
   });
 
-  new google.maps.Marker({
+  const marker = new google.maps.Marker({
     position: myLocation,
     map,
     title: "Hello World!",
+    icon: "images/icon.png",
   });
 }
 window.initMap = initMap;
