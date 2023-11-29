@@ -130,3 +130,7 @@ h1{
   color: #ffd700;
   font-weight: 900;
 }
+
+#map-container {
+  height: 144px;
+}
