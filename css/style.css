@@ -2,6 +2,10 @@ body{
   background-color: #ffffff;
 }
 
+@media (min-height: 1000px), screen and (orientation: portrait) {
+  /* … */
+}
+
 p{
   font-size: 13px;
   color: #ffd700;
