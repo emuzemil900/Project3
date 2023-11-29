@@ -7,7 +7,7 @@ function initMap() {
 
   const marker = new google.maps.Marker({
     position: myLocation,
-    map,
+    map: map,
     title: "Hello World!",
     icon: "images/icon.png",
   });
