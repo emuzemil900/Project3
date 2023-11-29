@@ -14,7 +14,7 @@ function initMap() {
 
 
 
-function initMap() {
+function addMarker() {
   const sapporo = { lat: 43.0609, lng: 141.3549 };
   const map = new google.maps.Map(document.getElementById("map-container"), {
     zoom: 4,
