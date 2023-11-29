@@ -32,10 +32,7 @@ function initMap() {
   });
 
   marker.addListener("click", () => {
-    infowindow.open({
-      anchor: marker,
-      map,
-    });
+    infowindow.open(map, marker);
   });
 }
 
