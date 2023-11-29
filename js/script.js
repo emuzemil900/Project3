@@ -11,7 +11,7 @@ function initMap() {
     title: "Hello World!",
   });
 }
-
+window.initMap = initMap;
   var contentString = '<h1>Sapparo</h1><p>Sapporo is the capital of Hokkaido, the second largest and northernmost of Japan's four major islands. It is notably a popular stop to watch and play winter sports like skiing and snowboarding.</p>';
 
   var infowindow = new google.maps.InfoWindow ({
