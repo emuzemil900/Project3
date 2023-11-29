@@ -20,7 +20,7 @@ function initMap() {
     zoom: 4,
     center: sapporo,
   });
-  const contentString = '<h1 class="site-title">Sapporo</h1><p class="sec-title">Sapporo is the capital of Hokkaido, the second largest and northernmost of the four major islands of Japan. It is notably a popular stop to watch and play winter sports like skiing and snowboarding.</p>'
+  const contentString = '<h1 class="sec-title">Sapporo</h1><p class="sub-title">Sapporo is the capital of Hokkaido, the second largest and northernmost of the four major islands of Japan. It is notably a popular stop to watch and play winter sports like skiing and snowboarding.</p>'
   const infowindow = new google.maps.InfoWindow({
     content: contentString,
     ariaLabel: "Sapporo",
