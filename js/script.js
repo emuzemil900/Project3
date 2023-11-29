@@ -11,8 +11,8 @@ function initMap() {
     title: "Hello World!",
     icon: "images/icon.png",
   });
-}
-window.initMap = initMap;
+
+
 
 function initMap() {
   const sapporo = { lat: 43.0609, lng: 141.3549 };
@@ -27,7 +27,7 @@ function initMap() {
   });
   const marker = new google.maps.Marker({
     position: saporro,
-    map,
+    map: map,
     title: "Saporro",
   });
 
