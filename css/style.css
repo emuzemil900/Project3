@@ -3,7 +3,7 @@ body{
 }
 
 @media (min-height: 1000px), screen and (orientation: landscape) {
-  /* … */
+  /* for desktops and laptops */
 }
 
 p{
